@@ -62,19 +62,29 @@ function ActivityForm() {
       <Button onClick={handleMenuOpen} variant="outlined" sx={{ mt: 2 }}>
         {activityType || 'Select Type'}
       </Button>
-      <Menu
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClose={handleMenuClose}
+      <div style={{ display: 'block' }}>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleMenuClose}
+        >
+          <MenuItem onClick={() => handleMenuSelect('Co-curricular')}>
+            Co-curricular
+          </MenuItem>
+          <MenuItem onClick={() => handleMenuSelect('Extra-curricular')}>
+            Extra-curricular
+          </MenuItem>
+        </Menu>
+      </div>
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{
+          mt: 2,
+          backgroundColor: '#118B50',
+          '&:hover': { backgroundColor: '#5DB996' },
+        }}
       >
-        <MenuItem onClick={() => handleMenuSelect('Co-curricular')}>
-          Co-curricular
-        </MenuItem>
-        <MenuItem onClick={() => handleMenuSelect('Extra-curricular')}>
-          Extra-curricular
-        </MenuItem>
-      </Menu>
-      <Button type="submit" variant="contained" sx={{ mt: 2 }}>
         Add Activity
       </Button>
     </Box>

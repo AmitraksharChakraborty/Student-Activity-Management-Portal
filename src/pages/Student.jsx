@@ -39,6 +39,7 @@ const StudentDashboard = () => {
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
             Student Dashboard
           </Typography>
+          <Typography>Logout</Typography>
         </Toolbar>
       </AppBar>
 
